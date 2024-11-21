@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "text": "You light up the room with your presence!",
+    "category": "heartfelt"
+  },
+  {
+    "id": 2,
+    "text": "Your creativity is off the charts!",
+    "category": "funny"
+  },
+  {
+    "id": 3,
+    "text": "You have a smile that could launch a thousand ships.",
+    "category": "heartfelt"
+  },
+  {
+    "id": 4,
+    "text": "You’re the human version of a warm hug.",
+    "category": "heartfelt"
+  },
+  {
+    "id": 5,
+    "text": "You’re so sharp, you could cut a sandwich with your wit.",
+    "category": "funny"
+  },
+  {
+    "id": 6,
+    "text": "If being awesome were a sport, you’d be a world champion.",
+    "category": "funny"
+  },
+  {
+    "id": 7,
+    "text": "Your kindness is contagious.",
+    "category": "heartfelt"
+  },
+  {
+    "id": 8,
+    "text": "You make the world a better place just by being in it.",
+    "category": "heartfelt"
+  },
+  {
+    "id": 9,
+    "text": "You're proof that good things come in awesome packages.",
+    "category": "funny"
+  },
+  {
+    "id": 10,
+    "text": "You’ve got style, smarts, and a heart of gold!",
+    "category": "heartfelt"
+  }
+]
