@@ -29,7 +29,7 @@ h1 {
   align-items: center;
   justify-content: center;
   background: #d5e0f9;
-  font-size: 1rem;
+  font-size: 2rem;
   box-shadow: 2px 3px 3px 1px rgb(165, 183, 192);
   transform: rotateX(90deg); /* Start folded */
   transition: transform 0.5s ease-out;
