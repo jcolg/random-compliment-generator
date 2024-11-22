@@ -36,6 +36,24 @@ async function createPostIt() {
 
   postIt.appendChild(complimentText);
 
+  // Add event listeners for showing the compliment
+  postIt.addEventListener("click", () => {
+    complimentText.style.opacity = "1";
+  });
+
+  postIt.addEventListener("touchend", (event) => {
+    event.preventDefault(); // Prevent default long-press behavior
+    complimentText.style.opacity = "1";
+  });
+
+  postIt.addEventListener("mouseenter", () => {
+    complimentText.style.opacity = "1";
+  });
+
+  postIt.addEventListener("mouseleave", () => {
+    complimentText.style.opacity = "0";
+  });
+
   // Add share button
   const shareButton = document.createElement("button");
   shareButton.textContent = "Share this Compliment";
@@ -53,6 +71,7 @@ async function createPostIt() {
   container.appendChild(postIt);
   container.appendChild(shareButton);
 }
+
 
 // Function to check for a compliment in the URL
 function loadComplimentFromURL() {
