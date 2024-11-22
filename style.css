@@ -109,6 +109,23 @@ button:hover {
   box-shadow: 0 0 20px #f7b2c4, 0 0 30px #f093a5;
 }
 
+.post-it + button {
+  background: #f7b2c4;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.post-it + button:hover {
+  background: #f093a5;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #f7b2c4;
+}
+
 /* Media Queries for Small Screens */
 @media (max-width: 768px) {
   h1 {
