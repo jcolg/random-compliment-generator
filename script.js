@@ -35,8 +35,25 @@ async function createPostIt() {
   const complimentText = document.createElement("h4");
   complimentText.textContent = randomCompliment;
 
+  // Initially hide the text
+  complimentText.style.opacity = "0";
+  complimentText.style.transition = "opacity 0.3s ease";
+
   postIt.appendChild(complimentText);
   container.appendChild(postIt);
+
+  // Show the compliment on click (for mobile) or hover (for desktop)
+  postIt.addEventListener("click", () => {
+    complimentText.style.opacity = "1";
+  });
+
+  postIt.addEventListener("mouseenter", () => {
+    complimentText.style.opacity = "1";
+  });
+
+  postIt.addEventListener("mouseleave", () => {
+    complimentText.style.opacity = "0";
+  });
 
   // Animate Post-it popping up
   setTimeout(() => {
@@ -46,4 +63,3 @@ async function createPostIt() {
 
 // Event Listeners
 generateButton.addEventListener("click", createPostIt);
-
