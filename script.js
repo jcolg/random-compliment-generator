@@ -33,25 +33,24 @@ async function createPostIt() {
   // Add compliment text
   const complimentText = document.createElement("h4");
   complimentText.textContent = randomCompliment;
-
   postIt.appendChild(complimentText);
 
-  // Add event listeners for showing the compliment
-  postIt.addEventListener("click", () => {
-    complimentText.style.opacity = "1";
-  });
+  // Handle interactions for showing the compliment
+  const revealCompliment = () => {
+    complimentText.style.opacity = "1"; // Make the text visible
+  };
 
-  postIt.addEventListener("touchend", (event) => {
-    event.preventDefault(); // Prevent default long-press behavior
-    complimentText.style.opacity = "1";
-  });
+  const hideCompliment = () => {
+    complimentText.style.opacity = "0"; // Hide the text
+  };
 
-  postIt.addEventListener("mouseenter", () => {
-    complimentText.style.opacity = "1";
-  });
-
-  postIt.addEventListener("mouseleave", () => {
-    complimentText.style.opacity = "0";
+  // Event listeners for different interactions
+  postIt.addEventListener("click", revealCompliment); // For desktop click
+  postIt.addEventListener("mouseenter", revealCompliment); // For desktop hover
+  postIt.addEventListener("mouseleave", hideCompliment); // For desktop hover-out
+  postIt.addEventListener("touchstart", (event) => {
+    event.preventDefault(); // Prevent long-press or default touch behavior
+    revealCompliment(); // Show compliment on touch
   });
 
   // Add share button
@@ -71,7 +70,6 @@ async function createPostIt() {
   container.appendChild(postIt);
   container.appendChild(shareButton);
 }
-
 
 // Function to check for a compliment in the URL
 function loadComplimentFromURL() {
