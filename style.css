@@ -58,6 +58,7 @@ h1 {
   overflow: hidden;
   cursor: pointer;
   padding: 20px 20px 0 20px;
+  pointer-events: auto;
 }
 
 .post-it:hover {
@@ -76,6 +77,7 @@ h1 {
 }
 
 .post-it h4 {
+  font-family: 'Patrick Hand', cursive; /* Add the font */
   opacity: 0;
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   transform: translateY(-20px);
